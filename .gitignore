@@ -1,0 +1,4 @@
+# User-specified stuff:
+.idea/*
+*.iml
+.DS_Store
