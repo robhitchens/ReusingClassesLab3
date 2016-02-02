@@ -33,7 +33,7 @@ public class Inventory {
         if(inventory.keySet().contains(prod)) {
             return inventory.remove(prod);
         }else {
-            return null; //fixme
+            return null; 
         }
     }
     public void increaseQuantity(String itemId, int amount){
