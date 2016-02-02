@@ -44,7 +44,7 @@ public class InventoryManager {
                     inventory.increaseQuantity(userInput("enter product name: "), Integer.parseInt(userInput("enter amount: "), 10));
                     break;
                 case "d":
-                    inventory.decreaseQuantity(userInput("enterproduct naemL "), Integer.parseInt(userInput("enter amount: ")));
+                    inventory.decreaseQuantity(userInput("enter product name: "), Integer.parseInt(userInput("enter amount: "), 10));
                     break;
                 case "p":
                     inventory.printInventory();
