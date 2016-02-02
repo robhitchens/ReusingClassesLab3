@@ -17,7 +17,7 @@ public class SpecInventory {
         cf.setQuantity(25);
         in.addItem(cf);
         assertTrue("returned product should be equal to original product",cf.equals(in.getProduct("Corn Flakes")));
-        Product rcf = in.removeProduct(cf);
+        Product rcf = in.removeProduct(cf.getId());
         //assertTrue();
     }
     @Test
