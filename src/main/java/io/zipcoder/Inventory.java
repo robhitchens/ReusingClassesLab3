@@ -4,6 +4,8 @@ package io.zipcoder;
  * Created by roberthitchens3 on 2/1/16.
  */
 import java.util.HashMap;
+import java.util.Scanner;
+
 public class Inventory {
     private HashMap<String, Product> inventory;
     private double value;
@@ -28,7 +30,11 @@ public class Inventory {
         inventory.put(prod.getId(), prod);
     }
     public Product removeProduct(String prod){
-        return inventory.remove(prod);
+        if(inventory.keySet().contains(prod)) {
+            return inventory.remove(prod);
+        }else {
+            return null; //fixme
+        }
     }
     public void increaseQuantity(String itemId, int amount){
         int initQuantity =inventory.get(itemId).getQuantity();
@@ -39,10 +45,12 @@ public class Inventory {
         inventory.get(itemId).setQuantity(initQuantity-amount);
     }
     public void printInventory(){
+        System.out.println("***** INVENTORY *****");
         for(String s : inventory.keySet()){
             Product p = inventory.get(s);
             System.out.println(p.getId() + " cost: $" + p.getPrice() + " Quantity: "+ p.getQuantity());
         }
+        System.out.println("*********************");
     }
 
 }
