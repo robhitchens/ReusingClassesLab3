@@ -12,7 +12,7 @@ public class InventoryManager {
         InventoryManager man = new InventoryManager();
     }
     private Inventory inventory;
-    private static String options = " s for sum of values \n gi to get inventory value " +
+    private static String options = " s for sum of values  " +
             "\n gp to get a particular product \n a to add item \n r to remove item " +
             "\n i to increase quantity \n d to decrease quantity\n p to print\n q to quit";
     public InventoryManager(){
@@ -27,10 +27,11 @@ public class InventoryManager {
             switch(in){
                 case "s":
                     inventory.sumUpInventoryValue();
-                    break;
-                case "gi":
                     System.out.println("total inventory value: "+inventory.getInventoryValue());
                     break;
+                /*case "gi":
+                    System.out.println("total inventory value: "+inventory.getInventoryValue());
+                    break;*/
                 case "gp":
                     inventory.getProduct(userInput("enter item name: ",""));
                     break;
